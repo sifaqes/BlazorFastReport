@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="07/07/2024 18:17:07" ReportInfo.Modified="07/07/2024 19:01:11" ReportInfo.CreatorVersion="2024.2.0.0">
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqMng6p2MWrneiHOCoj7q623TESXff2NXtIyKUcLVQpaip1Q2zeSpUdhJouIpkKU9DETm1Xqj6Gm0FTzSR1/ACmv2iD4HaHd8e+MZzd1NCzYvCH8gitO8+FA/olS9LsibRfvqYn+rfyVAv443CSDWIut6b3APDPrv4byUyJbWZbQpAhr8mn36WFNMIRjSakNi2YdFvsji49AtOAPAihrRbdg==">
+      <TableDataSource Name="Table" Alias="TablaProducto" DataType="System.Int32" Enabled="true" SelectCommand="exec Blazor_Report_Product&#13;&#10;">
+        <Column Name="Id" DataType="System.Int32"/>
+        <Column Name="Nombre" DataType="System.String"/>
+        <Column Name="Descripcion" DataType="System.String"/>
+        <Column Name="Precio" DataType="System.Decimal"/>
+        <Column Name="Cantidad" DataType="System.Int32"/>
+        <Column Name="Categoria" DataType="System.String"/>
+        <Column Name="Imagen" DataType="System.String"/>
+        <Column Name="NombreNome" DataType="System.String"/>
+        <Column Name="DescripcionNome" DataType="System.String"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <Parameter Name="CONN" DataType="System.String" AsString=""/>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text1" Left="37.8" Top="9.45" Width="387.45" Height="18.9" Border.Lines="Left" Text="Blazor Server .NET6 Reporting FastReport with MS SQL " Font="Arial, 10pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35"/>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="94.5" DataSource="Table">
+      <TableObject Name="Table1" Left="28.35" Top="18.9" Width="642.6" Height="41.58" Border.Lines="All">
+        <TableColumn Name="Column1" Width="128.52"/>
+        <TableColumn Name="Column2" Width="128.52"/>
+        <TableColumn Name="Column3" Width="128.52"/>
+        <TableColumn Name="Column4" Width="128.52"/>
+        <TableColumn Name="Column5" Width="128.52"/>
+        <TableRow Name="Row1" Height="41.58">
+          <TableCell Name="Cell1" Text="[TablaProducto.Id]" Font="Arial, 10pt"/>
+          <TableCell Name="Cell2" Border.Lines="Left" Text="[TablaProducto.Nombre]" Font="Arial, 10pt"/>
+          <TableCell Name="Cell3" Border.Lines="Left" Text="[TablaProducto.Descripcion]" Font="Arial, 10pt"/>
+          <TableCell Name="Cell4" Border.Lines="Left" Text="[TablaProducto.Precio]" Font="Arial, 10pt"/>
+          <TableCell Name="Cell5" Border.Lines="Left" Text="[TablaProducto.Cantidad]" Font="Arial, 10pt"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="172.65" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>
